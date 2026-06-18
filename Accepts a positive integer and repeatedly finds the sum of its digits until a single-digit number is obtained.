@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main
+{
+    public static int sum (int n){
+    int num,sum=0,count=0;
+    num=n;
+    while (num > 0){
+		    count++;
+		    int no = num%10;
+		    sum = sum + no;
+		    num = num/10;
+		}
+		if(count==1){
+		    return sum;
+		}
+		else{
+		    System.out.println("The number of digit in the given number is "+count);
+		    System.out.println("The sum is "+sum);
+		    num = sum;
+		    return sum(num);  
+		}
+}
+	public static void main(String[] args) {
+	    int result = 0;
+		Scanner sc = new Scanner (System.in);
+		int n = sc.nextInt();
+		result = sum(n);
+		System.out.println("The Final Sum is "+result);
+	}
+}
