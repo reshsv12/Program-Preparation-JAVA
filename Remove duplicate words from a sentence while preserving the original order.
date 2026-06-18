@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter your sentence: ");
+        String sentence = sc.nextLine();
+        String[] words = sentence.split(" ");
+        var uniqueWords = new LinkedHashSet<>(Arrays.asList(words));
+        String result = String.join(" ", uniqueWords);
+        System.out.println("Output:");
+        System.out.println(result);
+    }
+}
