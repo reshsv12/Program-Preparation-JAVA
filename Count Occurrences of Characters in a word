@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the String : ");
+		String str = sc.next();
+		for(int i=0;i<str.length();i++){
+		    int count = 0;
+		    char ch = str.charAt(i);
+		    boolean available = false;
+		    for (int j = 0; j < i; j++) {
+                if (str.charAt(j) == ch) {
+                    available = true;
+                    break;                
+                }
+            }
+            if(available){
+                continue;
+            }
+		    for(int j =1; j<str.length(); j++){
+		        char cha = str.charAt(j);
+		        if(ch == cha){
+		            count++;
+		        }
+		    }
+		    if(count==0){
+		        count=1;
+		    }
+		    System.out.print("The character " +ch);
+		    System.out.print(" occurs "+count );
+		    System.out.println(" times");
+		}
+	}
+}
+
+/* Output
+Enter the String : banana
+The character b occurs 1 times
+The character a occurs 3 times
+The character n occurs 2 times
+*/
