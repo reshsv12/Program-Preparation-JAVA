@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Salary Calculator.");
+		salaryCalculator();
+	}
+	public static void salaryCalculator(){
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter your basic salary:");
+	    int basicSal = sc.nextInt();
+	    System.out.print("Enter your Allowance:");
+	    int allowance = sc.nextInt();
+	    System.out.print("Enter your Deduction Amount:");
+	    int deduct = sc.nextInt();
+	    System.out.println("Your Gross Salary is " + (basicSal + allowance));
+	    System.out.println("Your Net Salary is " + ((basicSal+allowance) - deduct));
+	}
+}
+
+/* Output
+Salary Calculator.
+Enter your basic salary:30000
+Enter your Allowance:5000
+Enter your Deduction Amount:2000
+Your Gross Salary is 35000
+Your Net Salary is 33000
+*/
